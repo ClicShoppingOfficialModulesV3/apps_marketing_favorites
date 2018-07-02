@@ -25,6 +25,7 @@ http://monsite/myAdmin/index.php?A&Products\Favorites
 
 Activate the module Design/Products Listing
 
+See Marketplace for all informations
 Marketplace link : https://www.clicshopping.org/forum/files/file/9-apps-products-favorites/
 
 ![favorites](https://github.com/ClicShoppingOfficialModulesV3/apps_marketing_favorites/blob/master/ModuleInfosJson/favorites.png)
