@@ -47,7 +47,7 @@
       if (CLICSHOPPING::getBaseNameIndex() && !$CLICSHOPPING_Category->getPath()) {
         if (MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_MAX_DISPLAY != 0) {
 
-          if ($CLICSHOPPING_Customer->getCustomersGroupID() != 0) { // Clients en mode B2B
+          if ($CLICSHOPPING_Customer->getCustomersGroupID() != 0) {
 
 // Requetes SQL pour afficher les nouveaux produits groupe B2B lorsque l'on ne ce trouve pas dans une categorie
             $Qproduct = $CLICSHOPPING_Db->prepare('select p.products_id,
