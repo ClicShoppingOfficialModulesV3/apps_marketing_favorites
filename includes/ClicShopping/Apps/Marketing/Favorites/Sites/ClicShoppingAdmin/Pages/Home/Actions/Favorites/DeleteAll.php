@@ -9,7 +9,6 @@
    *
    */
 
-
   namespace ClicShopping\Apps\Marketing\Favorites\Sites\ClicShoppingAdmin\Pages\Home\Actions\Favorites;
 
   use ClicShopping\OM\Registry;
