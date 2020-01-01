@@ -211,7 +211,7 @@
       }
       ?>
     <tr>
-      <td><?php echo HTML::hiddenField('selected[]', 'selected'); ?></td>
+      <td></td>
       <td><?php echo $Qfavorites->valueInt('products_favorites_id'); ?></td>
 
         <td scope="row" width="50px">

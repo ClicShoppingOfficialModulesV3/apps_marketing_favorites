@@ -310,18 +310,13 @@
           'configuration_title' => 'Please indicate where boxing should be displayed',
           'configuration_key' => 'MODULE_BOXES_PRODUCTS_FAVORITES_DISPLAY_PAGES',
           'configuration_value' => 'all',
-          'configuration_description' => 'Select the pages where boxing must be present.',
+          'configuration_description' => 'Select the pages where the boxe must be present.',
           'configuration_group_id' => '6',
           'sort_order' => '6',
           'set_function' => 'clic_cfg_set_select_pages_list',
           'date_added' => 'now()'
         ]
       );
-
-      return $CLICSHOPPING_Db->save('configuration', ['configuration_value' => '1'],
-                                               ['configuration_key' => 'WEBSITE_MODULE_INSTALLED']
-                              );
-
     }
 
     public function  remove() {
