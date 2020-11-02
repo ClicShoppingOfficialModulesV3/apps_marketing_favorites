@@ -34,7 +34,7 @@
       static::installDbMenuAdministration();
       static::installProductsFavoritesDb();
 
-      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_Favorites->getDef('alert_module_install_success'), 'success', 'Favorites');
+      $CLICSHOPPING_MessageStack->add($CLICSHOPPING_Favorites->getDef('alert_module_install_success'), 'success');
 
       $CLICSHOPPING_Favorites->redirect('Configure&module=' . $current_module);
     }
@@ -120,7 +120,7 @@
       }
     }
 
-    private function installProductsFavoritesDb()
+    private static function installProductsFavoritesDb()
     {
       $CLICSHOPPING_Db = Registry::get('Db');
 
