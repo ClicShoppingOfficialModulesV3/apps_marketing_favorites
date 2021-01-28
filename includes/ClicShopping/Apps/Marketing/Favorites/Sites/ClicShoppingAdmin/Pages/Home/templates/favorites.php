@@ -56,7 +56,7 @@
   if (MODE_B2B_B2C == 'true') {
 
     if (isset($_POST['customers_group_id'])) {
-      $customers_group_id = $_POST['customers_group_id'];
+      $customers_group_id = HTML::sanitize($_POST['customers_group_id']);
     } else {
       $customers_group_id = null;
     }
@@ -138,8 +138,6 @@
     <tbody>
 <?php
   if (isset($_POST['customers_group_id'])) {
-    $customers_group_id = (int)$_POST['customers_group_id'];
-
     $Qfavorites = $CLICSHOPPING_Favorites->db->prepare('select  SQL_CALC_FOUND_ROWS p.products_id,
                                                                                     p.products_model,
                                                                                     p.products_image,
@@ -297,9 +295,9 @@
       <div class="row">
         <div class="col-md-12">
           <div
-            class="col-md-6 float-md-left pagenumber hidden-xs TextDisplayNumberOfLink"><?php echo $Qfavorites->getPageSetLabel($CLICSHOPPING_Favorites->getDef('text_display_number_of_link')); ?></div>
+            class="col-md-6 float-start pagenumber hidden-xs TextDisplayNumberOfLink"><?php echo $Qfavorites->getPageSetLabel($CLICSHOPPING_Favorites->getDef('text_display_number_of_link')); ?></div>
           <div
-            class="float-md-right text-md-right"> <?php echo $Qfavorites->getPageSetLinks(CLICSHOPPING::getAllGET(array('page', 'info', 'x', 'y'))); ?></div>
+            class="float-end text-md-right"> <?php echo $Qfavorites->getPageSetLinks(CLICSHOPPING::getAllGET(array('page', 'info', 'x', 'y'))); ?></div>
         </div>
       </div>
       <?php
