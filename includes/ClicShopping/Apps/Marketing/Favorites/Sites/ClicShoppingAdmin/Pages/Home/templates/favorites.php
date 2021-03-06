@@ -100,6 +100,8 @@
   <table
     id="table"
     data-toggle="table"
+    data-icons-prefix="bi"
+    data-icons="icons"
     data-id-field="selected"
     data-select-item-name="selected[]"
     data-click-to-select="true"
@@ -235,7 +237,7 @@
       <td
         class="text-md-left"><?php echo $CLICSHOPPING_Currencies->format($Qfavorites->value('products_price')); ?></td>
         <?php
-        if (!is_null($Qfavorites->value('scheduled_date'))) {
+        if (!\is_null($Qfavorites->value('scheduled_date'))) {
           ?>
           <td class="text-md-center"><?php echo DateTime::toShort($Qfavorites->value('scheduled_date')); ?></td>
           <?php
@@ -245,7 +247,7 @@
           <?php
         }
 
-        if (!is_null($Qfavorites->value('expires_date'))) {
+        if (!\is_null($Qfavorites->value('expires_date'))) {
           ?>
           <td class="text-md-center"><?php echo DateTime::toShort($Qfavorites->value('expires_date')); ?></td>
           <?php

@@ -29,7 +29,7 @@
       $this->title = CLICSHOPPING::getDef('module_boxes_products_favorites_title');
       $this->description = CLICSHOPPING::getDef('module_boxes_products_favorites_description');
 
-      if (defined('MODULE_BOXES_PRODUCTS_FAVORITES_STATUS')) {
+      if (\defined('MODULE_BOXES_PRODUCTS_FAVORITES_STATUS')) {
         $this->sort_order = MODULE_BOXES_PRODUCTS_FAVORITES_SORT_ORDER;
         $this->enabled = (MODULE_BOXES_PRODUCTS_FAVORITES_STATUS == 'True');
         $this->pages = MODULE_BOXES_PRODUCTS_FAVORITES_DISPLAY_PAGES;
@@ -173,7 +173,7 @@
             $products_image .= HTML::link($products_name_url, HTML::tickerImage(CLICSHOPPING::getDef('text_ticker_products_new'), 'ModulesBoxeBootstrapTickerNew', $CLICSHOPPING_ProductsCommon->getProductsTickerProductsNew($products_id)));
           }
 
-          if (MODULE_BOXES_PRODUCTS_FAVORITES_POURCENTAGE_TICKER == 'True' && !is_null($CLICSHOPPING_ProductsCommon->getProductsTickerSpecialsPourcentage($products_id))) {
+          if (MODULE_BOXES_PRODUCTS_FAVORITES_POURCENTAGE_TICKER == 'True' && !\is_null($CLICSHOPPING_ProductsCommon->getProductsTickerSpecialsPourcentage($products_id))) {
             $ticker = HTML::link($products_name_url, HTML::tickerImage($CLICSHOPPING_ProductsCommon->getProductsTickerSpecialsPourcentage($products_id), 'ModulesBoxeBootstrapTickerSpecialPourcentage', true));
           } else {
             $ticker = '';
@@ -204,7 +204,7 @@
     }
 
     public function  check() {
-      return defined('MODULE_BOXES_PRODUCTS_FAVORITES_STATUS');
+      return \defined('MODULE_BOXES_PRODUCTS_FAVORITES_STATUS');
     }
 
     public function  install() {
@@ -274,7 +274,7 @@
           'configuration_title' => 'Do you want to display a message New / Special / Featured / Favorites?',
           'configuration_key' => 'MODULE_BOXES_PRODUCTS_FAVORITES_TICKER',
           'configuration_value' => 'False',
-          'configuration_description' => 'Display a message New / Promotion / Selection / Favorites superimposed on the image of the product? <br /> <br /> the duration is configurable in the Configuration menu / my shop / Minimum / maximum values <br /> < br /> <i> (Value true = Yes - Value false = No) </i>',
+          'configuration_description' => 'Display a message New / Promotion / Selection / Favorites superimposed on the image of the product? <br /> <br /> the duration is configurable in the Configuration menu / my shop / Minimum / maximum values <br /> <br /> <i> (Value true = Yes - Value false = No) </i>',
           'configuration_group_id' => '6',
           'sort_order' => '9',
           'set_function' => 'clic_cfg_set_boolean_value(array(\'True\', \'False\'))',
