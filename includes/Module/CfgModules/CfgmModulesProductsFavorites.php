@@ -15,12 +15,12 @@
   class CfgmModulesProductsFavorites
   {
     public $code = 'modules_products_favorites';
-    public $directory;
+    public string $directory;
     public $language_directory;
-    public $site = 'Shop';
+    public string $site = 'Shop';
     public $key = 'MODULE_MODULES_PRODUCTS_FAVORITES_INSTALLED';
     public $title;
-    public $template_integration = true;
+    public bool $template_integration = true;
 
     public function __construct()
     {

@@ -19,9 +19,9 @@
 
   class Favorites extends \ClicShopping\OM\Modules\HeaderTagsAbstract
   {
-    protected $lang;
-    protected $app;
-    protected $template;
+    protected mixed $lang;
+    protected mixed $app;
+    protected mixed $template;
 
     protected function init()
     {
@@ -50,7 +50,7 @@
 
     public function getOutput()
     {
-      if (isset($_GET['Products']) && isset($_GET['Favorites'])) {
+      if (isset($_GET['Products'], $_GET['Favorites'])) {
         $this->template = Registry::get('Template');
 
         if (!Registry::exists('SeoShopFavorites')) {

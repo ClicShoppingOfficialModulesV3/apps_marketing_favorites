@@ -14,10 +14,10 @@
   use ClicShopping\OM\CLICSHOPPING;
 
   class ph_products_favorites_title {
-    public $code;
+    public string $code;
     public $group;
-    public string $title;
-    public string $description;
+    public $title;
+    public $description;
     public ?int $sort_order = 0;
     public bool $enabled = false;
 
@@ -37,7 +37,7 @@
     public function execute() {
       $CLICSHOPPING_Template = Registry::get('Template');
 
-      if (isset($_GET['Products']) && isset($_GET['Favorites'])) {
+      if (isset($_GET['Products'], $_GET['Favorites'])) {
         $content_width = (int)MODULE_PRODUCTS_FAVORITES_CONTENT_WIDTH;
         $text_position = MODULE_PRODUCTS_FAVORITES_POSITION;
 
